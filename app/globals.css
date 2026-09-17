@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist);
+  --font-serif: var(--font-display);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: #f6f7f4;
+  --foreground: #13253f;
+  --border: #dce2e6;
+  --ring: #ff715b;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * { @apply border-border outline-ring/30; }
+  html { background: var(--background); }
+  body { @apply bg-background text-foreground; font-family: Arial, Helvetica, sans-serif; }
+}
+
+.font-serif { font-family: Georgia, 'Times New Roman', serif; }
